@@ -1,0 +1,38 @@
+  <!DOCTYPE html>
+  <html lang="ko">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CSS Grid Layout</title>
+    <style>
+      /* Do it! 그리드 항목 사이에 간격 지정하기 */
+      .container {
+        width: 600px;        
+        border: 2px solid #222;
+        display:grid;
+        grid-template-columns:repeat(3, 1fr);  /* 열 3개 */ 
+      }
+      .items{
+        padding:10px;
+        font-size: 20px;        
+        text-align: center;
+      }   
+      .items:nth-child(odd){
+        background-color:#d6faff;
+      }
+      .items:nth-child(even){
+        background-color:#00b7ff;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="items">1</div>
+      <div class="items">2</div>
+      <div class="items">3</div>
+      <div class="items">4</div>
+      <div class="items">5</div>
+      <div class="items">6</div>
+    </div>
+  </body>
+  </html>

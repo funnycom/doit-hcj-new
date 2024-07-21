@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Array 객체의 메서드</title>
+  <style>
+    body {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+			font-size: 1.2em;
+    }
+		hr {
+			width: 100%;			
+		}
+	</style>
+</head>
+<body>
+  <div class="container">
+    <script>
+      // Do it! 인수 개수에 따라 splice 메서드 사용하기      
+      let study = ['html', 'css', 'javascript', 'jquery', 'react', 'nodejs'];
+  
+      // 인수가 1개일 경우
+      let js = study.splice(2);
+      document.write(`반환된 배열 : ${js}<br>` );
+      document.write(`변경된 배열 : ${study}`);
+      document.write(`<hr>`);
+  
+      // 인수가 2개일 경우
+      let jquery = js.splice(1,1);
+      document.write(`반환된 배열 : ${jquery}<br>`);
+      document.write(`변경된 배열 : ${js}`);  
+      document.write(`<hr>`);
+  
+      // 인수가 3개 이상일 경우
+      let modernJs = js.splice(1, 0, 'typescript');
+      document.write(`반환된 배열 : ${modernJs}<br>`);  
+      document.write(`변경된 배열 : ${js}`); 
+    </script>
+  </div>
+</body>
+</html>

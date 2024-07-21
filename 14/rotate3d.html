@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>Transform</title>
+  <style>
+    #container{
+      width:800px;
+      margin:20px auto;
+    }
+    .origin {
+      width: 100px;
+      height: 100px;
+      margin: 40px;
+      float: left;
+      border: 1px solid black;
+      /* Do it! 원근감 추가하기  */
+      
+    }
+    .origin > div {				
+      width:100px;
+      height:100px;
+      background-color:orange;
+      /* Do it! 트랜지션 효과 추가하기 */
+      
+    }
+
+    /* Do it! 각 요소에 rotate 함수 적용하기 */
+
+  </style>
+</head>
+
+<body>
+  <div id="container">
+    <div class="origin">
+      <div id="rotatex"></div>
+    </div>
+    <div class="origin">
+      <div id="rotatey"></div>
+    </div>
+    <div class="origin">		
+      <div id="rotatez"></div>
+    </div>
+    <div class="origin">	
+      <div id="rotatexyz"></div>	
+    </div>
+  </div>
+</body>
+</html>

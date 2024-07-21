@@ -1,0 +1,24 @@
+﻿<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>자리 배치도</title>
+</head>
+<body>
+  <h1>자리 배치도</h1>  
+  <script>    
+    // Do it! 자리 배치도 만들기 - 몇 줄이 필요할까? 
+    let memNum = parseInt(prompt('입장객은 몇 명인가요?'));  // 전체 입장객 
+    let colNum = parseInt(prompt('한 줄에 몇 명씩 앉습니까?'));  // 한 줄에 몇 명씩?
+
+    if (memNum % colNum === 0) {
+      rowNum = memNum / colNum;
+    }
+    else {
+      rowNum = parseInt(memNum / colNum) + 1;
+    }
+    document.write(`모두 ${rowNum}개의 줄이 필요합니다.`);
+  </script>
+</body>
+</html>

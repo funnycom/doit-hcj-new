@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>가상 선택자</title>
+  <style>
+    body {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      gap: 20px;
+    }
+    .container {
+      width: 300px;
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      text-align: center;
+    }
+
+    /* Do it! 가상 선택자를 사용해 항목 선택하기 */
+    .container p:nth-of-type(1) {  /* p 요소 중 첫번째 요소 선택 */
+      background-color: #fc2;
+    }
+    .container div:nth-of-type(2) {  /* div 요소 중 두번째 요소 선택*/
+      background-color: #2cf;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <p>첫 번째</p>
+    <div>두 번째</div>
+    <p>세 번째</p>
+    <div>네 번째</div>
+  </div>
+</body>
+</html>

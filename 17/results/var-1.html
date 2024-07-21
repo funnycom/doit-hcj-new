@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>var 예약어로 변수 선언하기</title>
+</head>
+<body>
+	<script>		
+    // Do it! var 예약어로 변수 선언하기
+
+    var sum = 0;  // 전역 변수 선언
+    
+		function addNumber() { 								
+			var result;  // 지역 변수 선언
+      sum = 10 + 20;			
+      result = 10 * 20;
+		}
+    addNumber();  // 함수 호출
+    console.log(sum);  // 30
+    console.log(result);  // 에러 발생  
+  </script>
+</body>
+</html>

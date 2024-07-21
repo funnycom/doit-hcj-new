@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>연습문제</title>
+	<style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .container {
+      width: 450px;
+      padding: 10px;
+      border: 1px solid #222;
+    }
+    .box{
+      width: 50px;
+      height: 50px;
+      background-color: #d7f4ff;
+      animation: changeColor 3s infinite, translate 3s alternate infinite;   /* 배경색을 3번 변경하는 애니메이션과 왼쪽에서 오른쪽으로 400px 이동하는 애니메이션을 동시에 적용하기 */      
+    }
+
+    /* 배경색을 3번 변경하는 애니메이션 정의하기 */
+    @keyframes changeColor { 
+      0% {  /* 0%에서 배경색을 노란색으로 시작 */
+        background-color: #ffe867;  
+      }
+      50% { /* 50%에서 배경색을 붉은색으로 변경 */
+        background-color: #ff5e62;
+      }
+      100% {  /* 100%에서 배경색을 하늘색으로 변경 */
+        background-color: #17bdff;
+      }
+    }
+
+    /* 왼쪽에서 오른쪽으로 400px 이동하는 애니메이션 정의하기 */
+    @keyframes translate {   
+      from {  /* 시작 위치 */
+        transform:translateX(0)  
+      }
+      to {  /* 오른쪽으로 400px 이동 */
+        transform: translateX(400px);  
+      }
+    }		
+	</style>
+</head>
+
+<body>
+	<div class="container">
+		<div class="box"></div>
+	</div>
+</body>
+</html>

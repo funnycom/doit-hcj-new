@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>var 예약어로 변수 선언하기</title>
+</head>
+<body>
+	<script>		
+    // Do it! var 예약어로 변수 선언하기
+
+    var sum = 0;  // 전역 변수 선언
+
+		function addNumber() { 								
+      sum = 10 + 20;			
+      result = 10 * 20;  // var 예약어를 사용하지 않았으므로 전역 변수로 선언됨
+		}
+    
+    addNumber();
+
+    console.log(sum);  // 30
+    console.log(result);  // 200
+  </script>
+</body>
+</html>

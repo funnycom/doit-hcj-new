@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mode Switcher</title>
+  <style>
+    .wrap {
+      width: 500px;
+      margin: 50px auto;
+      padding: 20px;
+      border: 1px dotted #333;
+    }
+    .light-mode {
+      background-color: #fff;
+      color: #222;
+    }
+    .dark-mode {
+      background-color: #222;
+      color: #fff;
+    }
+    .mode-switcher {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      padding: 10px;
+      background-color: #f0f0f0;
+      border: 1px solid #333;
+      cursor: pointer;
+    }
+    .dark-mode .mode-switcher {
+      background-color: #333;
+      border: 1px solid #f0f0f0;
+      color: #fff;
+    }
+  </style>
+</head>
+<body class="wrap light-mode">
+  <button id="modeSwitcher" class="mode-switcher">다크 모드</button>
+  <h1>Web Programming</h1>
+	<ul>
+		<li>HTML</li>
+		<li>CSS</li>
+		<li>Javascript</li>
+	</ul>
+  <script>
+    document.getElementById('modeSwitcher').addEventListener('click', function() {
+      const bodyElement = document.body;
+      const modeSwitcher = this;
+
+      // body 클래스를 토글해서 라이트 모드와 다크 모드 전환
+      bodyElement.classList.toggle('dark-mode');
+      bodyElement.classList.toggle('light-mode');
+
+      // 버튼 텍스트 업데이트
+      if (bodyElement.classList.contains('dark-mode')) {
+          modeSwitcher.textContent = '라이트 모드';
+      } else {
+          modeSwitcher.textContent = '다크 모드';
+      }
+    });
+
+  </script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>do...while</title>
+  <style>
+    body {
+      font-size:2em;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+  </style>
+</head>
+<body>
+  <script>
+    // Do it! do...while문을 사용해 별 표시하기
+    let stars = parseInt(prompt('몇 개의 별을 표시할까요?'));
+
+    do {
+      document.write('*');
+      stars--;
+    } while (stars > 0);
+  </script>
+</body>
+</html>

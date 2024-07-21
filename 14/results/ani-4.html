@@ -1,0 +1,47 @@
+﻿<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>Animation</title>
+  <style>
+    .box {
+      width: 100px;
+      height: 100px;
+      margin: 60px auto;      
+      border:1px solid #222;
+      /* Do it! 3차원 회전하는 애니메이션과 배경색을 변경하는 애니메이션을 동시에 적용하기 */
+      animation: rotate 1.5s infinite, background 1.5s infinite;
+    }
+
+    /* Do it! 3차원 회전하는 애니메이션 정의하기 0도 -> x축 -180도 회전 -> y축 -180도 회전  */
+    @keyframes rotate {  
+      0% { /* 0%에서 0도 회전 */
+        transform: perspective(120px) rotateX(0deg) rotateY(0deg); 
+      }
+      50% { /* 50%에서 x축 -180도 회전 */
+        transform: perspective(120px) rotateX(-180deg) rotateY(0deg); 
+      }
+      100% { /* 100%에서 y축 -180도 회전 */
+        transform: perspective(120px) rotateX(-180deg) rotateY(-180deg); 
+      }
+    }
+
+    /* Do it! 배경색을 변경하는 애니메이션 정의하기. 빨강 -> 초록 -> 파랑 */
+    @keyframes background {  
+      0% { /* 0%에서 빨강으로 시작 */
+        background-color: red; 
+      }
+      50% {  /* 50%에서 초록으로 변경 */
+        background-color: green 
+      }
+      100% { /* 100%에서 파랑으로 변경 */
+        background-color: blue; 
+      }
+    }
+  </style>
+</head>
+
+<body>
+	<div class="box">	</div>
+</body>
+</html>

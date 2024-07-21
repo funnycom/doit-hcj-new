@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>classList 추가/삭제 예제</title>
+  <style>
+    body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+    div {
+      margin-bottom: 20px;
+    }
+    button {
+      padding: 10px 20px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    /* Do it! 필요한 클래스 스타일 정의하기 */
+    .disabled {
+      color: #ccc;
+      background-color: #f0f0f0;
+      border: 1px solid #ccc;
+    }
+    .enabled {
+      color: #fff;
+      background-color: #007bff;
+      border: 1px solid #007bff;
+    }
+  </style>
+</head>
+<body>
+  <div>
+    <label>
+      <input type="checkbox" id="agree"> 필수 항목 동의
+    </label>
+  </div>
+  <div>
+    <button id="proceed" disabled>다음으로 진행</button>
+  </div>
+
+  <script>
+    // Do it! 체크 박스에 체크하면 버튼 활성화하기
+    document.addEventListener('DOMContentLoaded', function() {
+      const checkbox = document.querySelector('#agree');
+      const proceedButton = document.querySelector('#proceed');
+
+      checkbox.addEventListener('change', function() {
+        if (this.checked) {  // 체크했다면
+          proceedButton.classList.remove('disabled');  // .disabled 클래스 제거 
+          proceedButton.classList.add('enabled');  // .enabled 클래스 추가
+          proceedButton.disabled = false;  // 버튼 활성화
+        } else {  // 체크하지 않았다면
+          proceedButton.classList.remove('enabled');  // .enabled 클래스 제거
+          proceedButton.classList.add('disabled');  // .disabled 클래스 추가
+          proceedButton.disabled = true;  // 버튼 비활성화
+        }
+      });
+    });
+
+    </script>
+</body>
+</html>

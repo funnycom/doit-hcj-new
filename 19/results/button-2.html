@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>classList toggle 함수 예제</title>
+  <style>
+    body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+    div {
+      margin-bottom: 20px;
+    }
+    button {
+      padding: 10px 20px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .disabled {
+      color: #ccc;
+      background-color: #f0f0f0;
+      border: 1px solid #ccc;
+    }
+    .enabled {
+      color: #fff;
+      background-color: #007bff;
+      border: 1px solid #007bff;
+    }
+  </style>
+</head>
+<body>
+  <div>
+    <label>
+      <input type="checkbox" id="agree"> 필수 항목 동의
+    </label>
+  </div>
+  <div>
+    <button id="proceed" disabled>다음으로 진행</button>
+  </div>
+
+  <script>
+    // Do it! 체크 박스에 체크하면 버튼 활성화하기 - toggle() 함수 사용
+    document.addEventListener('DOMContentLoaded', function() {
+      const checkbox = document.querySelector('#agree');
+      const proceedButton = document.querySelector('#proceed');
+
+      checkbox.addEventListener('change', function() {
+        proceedButton.classList.toggle('enabled', this.checked);  // 체크했다면 .enabeld 토글
+        proceedButton.classList.toggle('disabled', !this.checked);  // 체크하지 않았다면 .disabled 토글
+        proceedButton.disabled = !this.checked;  // 버튼의 활성화/비활성화 상태
+      });
+    });
+  </script>
+</body>
+</html>

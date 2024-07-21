@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>DOM CSS</title>
+	<style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+		#rect {
+			width:100px;
+			height:100px;			
+			border:1px solid #222;
+			margin:30px auto;
+			transition: 1s;
+		}
+	</style>
+</head>
+<body>
+	<div id="container">
+		<p>도형 위로 마우스 포인터를 올려놓으세요.</p>
+		<div id="rect"></div>
+	</div>	
+	
+	<script>
+		// Do it! DOM에서 스타일 수정하기
+		let rect = document.querySelector("#rect");
+    
+		rect.addEventListener("mouseover", () => {
+			rect.style.backgroundColor = "green";  // rect 요소의 배경색
+			rect.style.borderRadius = "50%";  // rect 요소의 테두리 둥글게 처리
+		});
+		rect.addEventListener("mouseout", () => {
+			rect.style.backgroundColor = "";  // rect 요소의 배경색 지우기
+			rect.style.borderRadius = "";  // rect 요소의 테두리 둥글게 처리 안 함
+		});
+	</script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}		
+.container {  
+  width:500px;
+  margin:20px auto;
+  padding:20px;
+}
+.container h1 {
+  margin-bottom: 20px;
+}
+.container p {
+  margin-bottom: 20px;
+}
+.hidden {
+  opacity: 0;
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  white-space: nowrap; /* 텍스트가 한 줄로 보이도록 하여 넘치는 내용 숨김 */
+}
+input[type="text"] {
+  width:370px;
+  float:left;
+  height:30px;
+  padding-left:30px;
+}
+button {
+  width:90px;
+  height:30px;
+  float:right;
+  background:#222;
+  color:#fff;
+  border:none;
+}
+hr { 
+  clear:both; display:none; 
+}
+ul { 
+  list-style:square; 
+  padding-top:50px;
+  margin-left: 80px;
+}
+li { 
+  line-height: 2.5; 
+}
+li:hover { 
+  cursor:pointer;
+}

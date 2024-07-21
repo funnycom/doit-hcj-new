@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Web Programming</title>
+	<link rel="stylesheet" href="css/subject.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Web Programming</h1>
+    <p>공부할 주제를 기록해 보세요</p>
+    <form action="">
+      <label for="subject" class="hidden">주제</label>
+      <input type="text" id="subject" autofocus>
+      <button>추가</button>
+    </form>
+    <hr>  
+    <ul id="itemList"></ul>  
+  </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {   // 웹 페이지가 로딩되면 실행
+      const button = document.querySelector("button");  // 버튼 요소 가져오기
+      button.addEventListener("click", function(event) {  // 버튼을 클릭하면 실행
+        event.preventDefault();  // 기본 동작을 막음
+        newRegister();   // 새로운 주제를 등록하는 함수 호출  
+      });
+    });    
+
+    function newRegister() {
+      const newItem = document.createElement("li");  // 요소 노드 추가
+      const subject = document.querySelector("#subject");  // 폼의 텍스트 필드
+      const newText = document.createTextNode(subject.value);  // 텍스트 필드의 값을 텍스트 노드로 만들기
+      newItem.appendChild(newText);   // 텍스트 노드를 요소 노드의 자식 노드로 추가
+
+      const itemList = document.querySelector("#itemList");  // 웹 문서에서 부모 노드 가져오기 
+      itemList.appendChild(newItem);  // 새로 만든 요소 노드를 부모 노드에 추가
+
+      subject.value="";
+    }
+  </script>
+</body>
+</html>

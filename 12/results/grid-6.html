@@ -1,0 +1,58 @@
+  <!DOCTYPE html>
+  <html lang="ko">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CSS Grid Layout</title>
+    <style>    
+      /* Do it! 그리드 레이아웃 지정하기  */
+      .container{
+        width:700px;
+        display:grid;
+        grid-template-columns:repeat(3, 1fr);
+        grid-template-rows:repeat(3, 100px);
+        gap: 1rem;
+      }
+      .box{
+        padding:15px;
+        color:#fff;
+        text-align:center;
+      }   
+      /* Do it! 그리드 라인을 사용해 배치하기 */
+      .box1 {
+        background-color:#3689ff;      
+        grid-column: 1 / -1;  /* grid-column:1 / 4; */
+        grid-row-start: 1;   /* grid-row: 1 / 2; */
+      }
+      .box2 {
+        background-color:#00cf12;
+        grid-row:2 / -1;  /* grid-row: 2 / 4; */        
+        grid-column-start:1;   /* grid-column: 1 / 2; */
+      }
+      .box3 {
+        background-color:#ff9019;
+        grid-column:2 / -1;  /* grid-column: 2 / 4; */   
+        grid-row-start: 2;   /* grid-row: 2 / 3; */
+        }
+      .box4 {
+        background-color:#ffd000;
+        grid-column-start:2;  /* grid-column: 2 / 3; */
+        grid-row-start:3;  /* grid-row: 3 / 4; */
+      }
+      .box5 {
+        background-color:#ff3f3f;
+        grid-column: 3 / -1;  /* grid-column: 3 / 4; */
+        grid-row: 3 / -1;  /* grid-row: 3 / 4; */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="box box1">box1</div>
+      <div class="box box2">box2</div>
+      <div class="box box3">box3</div>
+      <div class="box box4">box4</div>
+      <div class="box box5">box5</div>
+    </div>
+  </body>
+  </html>

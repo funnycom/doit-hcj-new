@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>버튼을 화면 중앙에 배치하기</title>
+  <style>
+    /* Do it! 버튼을 화면 중앙에 배치하기 */
+    * {
+      margin:0;
+      box-sizing: border-box;
+    }
+    body {      
+      background:url('images/bg5.jpg') no-repeat left top fixed;
+      background-size:cover;      
+      display: flex;      /* 플렉스 컨테이너 지정 */
+      justify-content: center;  /* 주축 정렬 방법 - 중앙 정렬 */
+      align-items: center;  /* 교차축 정렬 방법 - 중앙 정렬 */
+      min-height:100vh;  /* 브라우저 높이의 100% */
+    }
+    button {
+      background-color:#ccc;
+      font-size: 1.2em; 
+      padding:1em 2em;
+      border:none;
+      border-radius:5px;    
+      box-shadow:1px 1px 2px #fff;  
+    }
+  </style>  
+</head>
+<body>
+  <button>클릭!</button>             
+</body>
+</html>

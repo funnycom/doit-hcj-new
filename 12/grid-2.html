@@ -1,0 +1,35 @@
+  <!DOCTYPE html>
+  <html lang="ko">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CSS Grid Layout</title>
+    <style>
+      /* Do it! grid-auto-rows 속성 지정하기 */
+      .container {
+        display:grid;
+        grid-template-columns: 100px 200px 300px;        
+      }
+      
+      .items{
+        border: 1px solid #222;
+        padding:10px;      
+        font-size: 20px;
+        text-align: center;
+      }   
+      .items:nth-child(even){
+        background-color:#ffc400;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="items">1</div>
+      <div class="items">2</div>
+      <div class="items">3</div>
+      <div class="items">4</div>
+      <div class="items">5</div>
+      <div class="items">6</div>
+    </div>
+  </body>
+  </html>

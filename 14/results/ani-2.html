@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>Animation</title>
+  <style>
+    .box {
+      width: 100px;
+      height: 100px;      
+      background-color: #07f;
+      animation-name: slideRight;
+      animation-duration: 2s;
+      /* Do it! 애니메이션 무한 반복 & 방향 지정하기 */
+      animation-iteration-count: infinite;
+      animation-direction: alternate;
+    }
+
+    @keyframes slideRight {
+      from {
+        transform: translateX(0);
+      }
+      to {
+        transform: translateX(500px);
+      }
+    }
+  </style>
+</head>
+
+<body>
+	<div class="box">	</div>
+</body>
+</html>

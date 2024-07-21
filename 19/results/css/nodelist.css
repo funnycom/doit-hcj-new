@@ -1,0 +1,10 @@
+* {
+  box-sizing: border-box;
+}
+ul { 
+  list-style:none; 
+}
+li { 
+  font-size: 1.2em;
+  line-height: 2; 
+}

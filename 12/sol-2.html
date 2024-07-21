@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>연습문제</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: black; /* 배경색 */
+      margin: 0;
+    }
+    .container {      
+      width: 600px; 
+      height: 500px; 
+      display: grid;
+      grid-template-columns: repeat(4, 1fr); /* 4개의 동일한 크기의 열 */
+      grid-template-rows: repeat(3, 1fr); /* 3개의 동일한 크기의 행 */
+      gap: 20px; /* 그리드 아이템 사이의 간격 */
+    }
+    .grid-item {
+      background-color: yellow; /* 아이템 배경색 */
+      padding: 20px;
+      text-align: center;
+      font-size: 1.5em;
+    }
+    .item1 {
+      grid-column: 1 / 3;
+      grid-row: 1 / 3;
+    }
+    .item2 {
+      grid-column: 3 / 5;
+      grid-row: 1 / 2;
+    }
+    .item3 {
+      grid-column: 3 / 4;
+      grid-row: 2 / 4;
+    }
+    .item4 {
+      grid-column: 4 / 5;
+      grid-row: 2 / 4;
+    }
+    .item5 {
+      grid-column: 1 / 3;
+      grid-row: 3 / 4;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="grid-item item1">1</div>
+    <div class="grid-item item2">2</div>
+    <div class="grid-item item3">3</div>
+    <div class="grid-item item4">4</div>
+    <div class="grid-item item5">5</div>
+  </div>
+</body>
+</html>

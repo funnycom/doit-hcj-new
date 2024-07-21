@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>블록 스코프</title>
+</head>
+<body>
+	<script>		
+    // Do it! 호이스팅이 없는 let 변수
+
+    let x = 10;
+
+    function display() {
+      console.log(x); 
+      console.log(y);  // ReferenceError: y is not defined
+      let y =20;
+    }
+
+    display();
+  </script>
+</body>
+</html>

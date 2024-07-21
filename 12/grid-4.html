@@ -1,0 +1,54 @@
+  <!DOCTYPE html>
+  <html lang="ko">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CSS Grid Layout</title>
+    <style>
+      .container {
+        width:800px;
+        border: 1px solid #ccc;
+        display:grid;        
+        grid-template-columns: repeat(5, minmax(100px, 1fr));
+        margin-bottom: 20px;
+      }
+      /* Do it! auto-fit과 auto-fill을 사용해 배치하기 */
+ 
+      h1 {
+        font-size:24px;
+      }
+      .items{
+        border: 1px solid #222;
+        padding:10px;     
+        font-size: 20px;
+        text-align: center; 
+      }   
+      .items:nth-child(odd){
+        background-color:#d6faff;
+      }
+      .items:nth-child(even){
+        background-color:#00b7ff;
+      }
+    </style>
+
+  </head>
+  <body>
+    <h1>auto-fit일 때</h1>
+    <div class="container container-1">            
+      <div class="items">1</div>
+      <div class="items">2</div>
+      <div class="items">3</div>
+      <div class="items">4</div>
+      <div class="items">5</div>
+    </div>
+
+    <h1>auto-fill일 때</h1>
+    <div class="container container-2">            
+      <div class="items">1</div>
+      <div class="items">2</div>
+      <div class="items">3</div>
+      <div class="items">4</div>
+      <div class="items">5</div>
+    </div>
+  </body>
+  </html>

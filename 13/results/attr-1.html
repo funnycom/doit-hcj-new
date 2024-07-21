@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>속성 선택자</title>
+<style>
+   ul {
+		 list-style:none;
+   }
+	 li {
+		 width:120px;	 
+		 display:inline-block;
+		 margin:10px;
+	 }
+		li a {
+			padding: 5px 20px;
+			font-size: 14px;
+			text-decoration: none;
+			font-weight: bold;
+		}
+
+		/* Do it! href 속성이 있는 a 요소의 스타일 지정하기 */
+	 	a[href] {
+			background:yellow;  /* 배경색 지정 */
+		 	border:1px solid #ccc;  /* 테두리 지정 */
+		 	font-weight:normal;  /* 글자 굵기 지정 */
+	 	}
+</style>
+</head>
+
+<body>
+	<ul>
+		<li><a>메인 메뉴 : </a></li>
+		<li><a href="#">메뉴 1</a></li>
+		<li><a href="#">메뉴 2</a></li>
+		<li><a href="#">메뉴 3</a></li>
+		<li><a href="#">메뉴 4</a></li>
+	</ul>
+  </body>
+ </html>

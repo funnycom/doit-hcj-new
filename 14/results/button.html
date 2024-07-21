@@ -1,0 +1,52 @@
+﻿<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>버튼에 동적인 효과 만들기</title>
+  <style>
+    body {
+      background-image: linear-gradient(to right, #ff5e62, #ff9966);
+      display:flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;      
+    }
+    .button {
+      text-decoration: none;
+      font-size: 1.5em;
+      letter-spacing: 2px;
+      color: #fff;
+      outline: 2px solid #fff;
+      padding:20px 60px;
+      position: relative;  /* 현재 요소를 기준으로 상대적으로 배치 */
+      overflow: hidden;  /* 현재 요소의 내용이 넘치면 숨김 */
+      transition: color 1s;  /* 글자색 변화를 1초 동안 부드럽게 처리 */
+    }
+
+    /* Do it! .button에 동적인 효과 추가하기 */
+    .button::before {
+      content: "";
+      position:absolute;  /* 부모 요소에 대해 상대적으로 배치 */
+      top:0;   /* 부모 요소의 상단에 배치 */  
+      left: -50px;  /* 부모 요소의 왼쪽에서 -50px만큼 떨어져 배치 */
+      width: 0;  /* 너비를 0으로 설정하여 숨김 */
+      height: 100%;  /* 부모 요소의 높이와 같게 설정 */
+      background-color: #fff;  /* 배경색을 흰색으로 설정 */
+      z-index: -10;  /* z-index를 -10로 설정하여 다른 요소보다 뒤에 배치 */
+      transform: skewX(35deg);  /* X축으로 35도 기울임 */
+      transition: width 1s;  /* 너비 변화를 1초 동안 부드럽게 처리 */
+    } 
+    .button:hover {
+      color: #ff5e62;  /* 마우스를 올렸을 때 글자색을 빨간색으로 변경 */
+    }
+    .button:hover::before {
+      width: 150%;  /* 마우스를 올렸을 때 너비를 150%로 변경 */
+    }
+  </style>
+</head>
+
+<body>
+	<a href="#" class="button">둘러보기</a>
+</body>
+</html>

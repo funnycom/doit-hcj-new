@@ -1,0 +1,34 @@
+﻿<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>플렉스 박스 레이아웃</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    .container {
+      width: 800px;
+      display:flex;          
+      border:1px solid #222;
+      background-color:#eee;
+      gap: 30px;
+    }         
+    /* Do it! flex-basis 속성을 사용해 플렉스 항목의 기본 크기 지정하기 */                       
+    .box {
+      background-color:#222;   
+    }
+    p {
+      color:#fff;
+      text-align: center;
+      font-size: 2rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="box"><p>가나다라마</p></div>
+    <div class="box"><p>가나다라마바사</p></div>
+    <div class="box"><p>ABCDE</p></div>
+  </div>
+  
+</body>
+</html>

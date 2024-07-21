@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8">
+		<title>Transform</title>
+    <style>
+      .origin{
+				width:152px;
+				height:180px;
+				border:1px solid black;
+				margin:30px;
+				float:left;  
+      }
+      .origin > div {
+        width:152px;
+        height:180px;
+      }
+      .rotatex:hover {
+        transform: rotateX(50deg);  /* x축으로 50도 회전 */ 
+      }
+
+			/* Do it! 두번째 이미지에 원근감 추가하기  - 부모 요소에 적용할 것  */
+
+		</style>
+	</head>
+	<body>		
+		<div class="origin">
+			<div class="rotatex">
+				<img src="images/sunset.jpg" alt="">
+			</div>
+		</div>
+		<div class="origin" id="pers">
+			<div class="rotatex">
+				<img src="images/sunset.jpg" alt="">
+			</div>
+		</div>
+	</body>
+</html>

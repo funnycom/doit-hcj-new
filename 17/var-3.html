@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>변수 호이스팅</title>
+</head>
+<body>
+  <script>		 
+    // Do it! 변수 호이스팅 확인하기
+
+    var x = 10;  // 전역 변수 선언
+
+		function displayNumber() { 								
+      console.log(`x is ${x}`);
+      console.log(`y is ${y}`);      
+      var y = 20;  // 지역 변수 선언 및 값 할당
+		}
+
+    displayNumber();
+  </script>
+</body>
+</html>

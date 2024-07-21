@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Window 객체</title>
+</head>
+<body>
+  <p>문서를 열면 팝업 창이 표시됩니다</p>
+  <script>
+    // Do it! Screen 객체 연습하기 - 화면 중앙에 팝업 창 표시하기
+
+    // 기존 코드
+    // window.open('notice.html', 'pop', 'width=500, height=400');
+
+    // 수정 코드
+    function openCenter(doc, win, width, height){        
+      let left = (screen.availWidth - width) / 2;  // 팝업 창의 왼쪽 좌표
+      let top = (screen.availHeight - height) / 2;   // 팝업 창의 위쪽 좌표 
+      let opt = `left=${left}, top=${top}, width=${width}, height=${height}`;
+      window.open(doc, win, opt);
+    }
+    openCenter('notice.html', 'pop', 500, 400)        
+  </script>
+</body>
+</html> 

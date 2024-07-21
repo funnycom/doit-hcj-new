@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>Animation</title>
+  <style>
+    .box {
+      width: 100px;
+      height: 100px;
+      margin: 60px auto;      
+      animation: rotate 1.5s infinite, background 1.5s infinite alternate;
+    }
+
+    /* Do it! 0도 -> x축 -180도 회전 -> y축 -180도 회전하는 애니메이션 정의하기 */
+    @keyframes rotate {  
+      from { transform: perspective(120px) rotateX(0deg) rotateY(0deg); }
+      50% { transform: perspective(120px) rotateX(-180deg) rotateY(0deg); }
+      to { transform: perspective(120px) rotateX(-180deg) rotateY(-180deg); }
+    }
+
+    /* 배경색을 빨강 -> 초록 -> 파랑순으로 바꾸는 애니메이션 정의하기 */
+    @keyframes background {  
+      from { background-color: red; }
+      50% { background-color: green }
+      to { background-color: blue; }
+    }
+  </style>
+</head>
+
+<body>
+	<div class="box">	</div>
+</body>
+</html>

@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>input 속성 알아보기</title>
+</head>
+<body>
+  <h1>소리 조절하기</h1> 
+  <form>
+    <!-- Do it! 슬라이더 값 표시하기 -->
+
+    <input type="range" min="0" max="100" step="1" value="20" oninput="document.getElementById('selected-value').innerText = this.value">
+    <span id="selected-value">20</span>
+  </form>
+</body>
+</html>

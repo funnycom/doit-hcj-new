@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>즉시 실행 함수</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    p {
+      font-size: 1.2em;
+    }
+    .accent {
+      font-weight:bold;
+      color:#00f;
+    }
+	</style>
+</head>
+<body>
+	<script>		
+    // Do it! 즉시 실행 함수 사용하기
+    (function() {
+      let userName = prompt("이름을 입력하세요.");
+      document.write(`<p>안녕하세요? <span class="accent">${userName}</span>님!</p>`);
+    }());
+  </script>	
+</body>
+</html>

@@ -1,0 +1,60 @@
+  <!DOCTYPE html>
+  <html lang="ko">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CSS Grid Layout</title>
+    <style>
+      /* Do it! 그리드 레이아웃 지정하기 */
+      .container {
+        width:700px;
+        display:grid;
+        grid-template-rows:repeat(3, 100px);
+        grid-template-areas: 
+          "box1 box1 box1"
+          "box2 box3 box3"
+          "box2 box4 box5";
+        gap: 1rem;
+      }
+
+      .box{
+        padding:15px;
+        color:#fff;
+        text-align:center;
+      }   
+      /* Do it! 그리드 라인을 사용해 배치하기 */
+      .box1 {
+        background-color:#3689ff;      
+        grid-area: box1;
+      }
+      .box2 {
+        background-color:#00cf12;
+        grid-area: box2;
+      }
+      .box3 {
+        background-color:#ff9019;
+        grid-area: box3;
+        }
+      .box4 {
+        background-color:#ffd000;
+        grid-area: box4;
+      }
+      .box5 {
+        background-color:#ff3f3f;
+        grid-area: box5;
+      }
+      
+      /* Do it! 템플릿 영역을 사용해 배치하기 */
+
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="box box1">box1</div>
+      <div class="box box2">box2</div>
+      <div class="box box3">box3</div>
+      <div class="box box4">box4</div>
+      <div class="box box5">box5</div>
+    </div>
+  </body>
+  </html>
