@@ -35,7 +35,7 @@
       }
 
       function showLightbox() {
-				let bigLocation = this.data-src; // 클릭한 이미지의 data-src 속성 값을 bigLocation 변수에 저장
+				let bigLocation = this.dataset.src; // 클릭한 이미지의 data-src 속성 값을 bigLocation 변수에 저장
 				lightboxImage.src = bigLocation;  // 라이트박스 이미지의 src 속성을 클릭한 이미지의 data-src 속성으로 변경
 				lightbox.style.display = 'block';  // 라이트박스 이미지를 화면에 표시
       }
